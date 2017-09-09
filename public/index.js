@@ -13,19 +13,19 @@ var makeRequest = function(url, callback){
 var requestComplete = function(){
   console.log("Request Successfully Completed!");
   if(this.status !== 200) return;
-
   var jsonString = this.responseText;
   var gifs = JSON.parse(jsonString);
+  console.log(gifs);
   localStorage.setItem('gif', gifs);
-  console.log(gifs.data)
   loopThrough(gifs);
 }
 
 var loopThrough = function(gifs) {
   array = gifs.data;
-  var singleGif = array.forEach(function(gif, index){
+  var singleGif = array.forEach(function(gif){
+    console.log(array)
     createList(singleGif);
-    console.log(singleGif)
+
   });
 }
 
