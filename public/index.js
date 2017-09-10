@@ -57,7 +57,22 @@ var createSearchList = function(gif) {
   console.log(newSection);
   searchImg = newSection.appendChild(document.createElement('a'));
   searchImg.outerHTML = '<a href="'+ gif.url +'" target="_blank"><img class="gifs" src="'+ gif.images.fixed_height.webp +'" alt="'+gif.slug+'"></a><br><br>'
-  console.log(searchImg.outerHTML);
+  // var container = document.querySelector("#chart")
+  // new Highcharts.Chart({
+  //   chart: {
+  //     type: 'pie',
+  //     renderTo: container
+  //   },
+  //   text: "Ratings"
+  //   },
+  //   // series: [
+  //   // {
+  //   // name: "Rating",
+  //   // data: [gif.rating]
+  //   // }
+  // // ]
+  // });
+  console.log(gif.rating);
 }
 
 var createList = function(gif) {

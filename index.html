@@ -4,6 +4,7 @@
   <title>GIFs</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src='index.js'></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
 </head>
 <body>
   <h1>Gif Finder</h1>
@@ -11,6 +12,7 @@
     <input type="search" name="Enter keywords" id="input" onsearch= "makeSearchRequest(searchComplete)">
       <br><br>
       <section id="search-data">
+        <div id="chart"></div>
       </section>
     <h2>Top 25 Trending Gifs...</h2>
       <section id="gif-list">
