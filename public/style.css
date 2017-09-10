@@ -1,5 +1,17 @@
-h1, h2 {
-  font-family:sans-serif;
+h1, h2, input {
+  font-family: monospace;
+  text-align: center;
+  align-content: center;
+}
+
+.header {
+  font-family: monospace;
+  text-align: left;
+}
+
+body {
+  background-color: #bed3f4;
+  align-items: center;
 }
 
 .gifs {
@@ -7,4 +19,9 @@ h1, h2 {
   height: 250px;
   width: auto;
   align-content: space-between;
+  align-items: center;
+  margin: auto;
+  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
 }

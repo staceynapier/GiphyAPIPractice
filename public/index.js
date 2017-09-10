@@ -56,14 +56,14 @@ var createSearchList = function(gif) {
   var newSection = document.querySelector('#search-data');
   console.log(newSection);
   searchImg = newSection.appendChild(document.createElement('a'));
-  searchImg.outerHTML = '<a href="'+ gif.url +'" target="_blank"><img class="gifs" src="'+ gif.images.fixed_height.webp +'" alt="'+gif.slug+'"></a>'
+  searchImg.outerHTML = '<a href="'+ gif.url +'" target="_blank"><img class="gifs" src="'+ gif.images.fixed_height.webp +'" alt="'+gif.slug+'"></a><br><br>'
   console.log(searchImg.outerHTML);
 }
 
 var createList = function(gif) {
   var section = document.querySelector('#gif-list');
   img = section.appendChild(document.createElement('a'));
-  img.outerHTML = '<a href="'+ gif.url +'" target="_blank"><img class="gifs" src="'+ gif.images.fixed_height.webp +'" alt="'+gif.slug+'"></a>'
+  img.outerHTML = '<a href="'+ gif.url +'" target="_blank"><img class="gifs" src="'+ gif.images.fixed_height.webp +'" alt="'+gif.slug+'"></a><br><br>'
   console.log(img.outerHTML);
 }
 
