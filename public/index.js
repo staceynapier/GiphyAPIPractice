@@ -15,26 +15,23 @@ var requestComplete = function(){
   if(this.status !== 200) return;
   var jsonString = this.responseText;
   var gifs = JSON.parse(jsonString);
-  console.log(gifs);
-  localStorage.setItem('gif', gifs);
-  loopThrough(gifs);
+  console.log(gifs.data);
+  localStorage.setItem('gifs', gifs.data);
+  loopThrough(gifs.data);
 }
 
 var loopThrough = function(gifs) {
-  array = gifs.data;
-  var singleGif = array.forEach(function(gif){
-    console.log(array)
-    createList(singleGif);
-
+  gifs.map(function(gif){
+    createList(gif);
   });
 }
 
 var createList = function(gif) {
-  gifs = document.querySelector('#gif-list');
-  li = document.createElement('li')
-  li.classList = 'list-data'
-  li.innerText = gif.source;
-  gifs.appendChild('li')
+  var section = document.querySelector('#gif-list');
+  img = section.appendChild(document.createElement('a'));
+  img.outerHTML = '<a href="'+ gif.url +'" target="_blank"><img class="gifs" src="'+ gif.images.fixed_height.webp +'" alt="'+gif.slug+'"></a>'
+
+  console.log(img.outerHTML);
 }
 
 window.addEventListener('load', app);
